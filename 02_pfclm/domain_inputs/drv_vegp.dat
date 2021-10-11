@@ -1,0 +1,97 @@
+!=========================================================================
+!
+!  CLMCLMCLMCLMCLMCLMCLMCLMCL  A community developed and sponsored, freely   
+!  L                        M  available land surface process model.  
+!  M --COMMON LAND MODEL--  C  
+!  C                        L  CLM WEB INFO: http://clm.gsfc.nasa.gov
+!  LMCLMCLMCLMCLMCLMCLMCLMCLM  CLM ListServ/Mailing List: 
+!
+!=========================================================================
+! clm_vegp.dat: 
+!
+! DESCRIPTION:		  
+!  Vegetation parameter data file for IGBP classification.
+!  Please note that any other classification can be used with CLM
+!    provided that the following parameter values are given.  
+!  This data file is read in by drv_getvegp.f90 - this program expects
+!    the format given below, but does not assume an exact parameter order.
+!
+! REVISION HISTORY:
+!  15 September 1999: Yongjiu Dai; Initial code
+!  15 December 1999:  Paul Houser; F90 Revision 
+!  25 November 2000: Mariana Vertenstein
+!=========================================================================
+!Burn Severity Land Cover Types
+!  1 evergreen needleleaf forests (unburned)
+!  2 evergreen needleleaf forests (low severity)
+!  3 evergreen needleleaf forests (moderate severity)
+!  4 evergreen needleleaf forests (high severity)
+!=========================================================================
+!
+itypwat        (1-soil, 2-land ice, 3-deep lake, 4-shallow lake, 5-wetland: swamp, marsh)
+1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+!
+lai            Maximum leaf area index [-]
+6.000 4.050 2.100 0.150 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000 6.000
+!
+lai0           Minimum leaf area index [-]
+5.000 3.375 1.750 0.125 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000 5.000
+!
+sai            Stem area index [-]
+2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00
+!
+z0m            Aerodynamic roughness length [m]
+1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00 1.00
+!
+displa         Displacement height [m]
+11.0 11.00 11.0 11.0 11.00 11.0 11.0 11.00 11.0 11.0 11.00 11.0 11.0 11.00 11.0 11.0 11.00 11.0
+!
+dleaf          Leaf dimension [m]
+0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04 0.04
+!
+roota          Fitted numerical index of rooting distribution
+7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00 7.00
+!
+rootb          Fitted numerical index of rooting distribution
+2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00 2.00
+!
+rhol_vis       !leaf reflectance vis  
+0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07 0.07
+!
+rhol_nir       !leaf reflectance nir 
+0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35 0.35
+!
+rhos_vis       !stem reflectance vis
+0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16 0.16
+!
+rhos_nir       !stem reflectance nir 
+0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39 0.39
+!
+taul_vis       !leaf transmittance vis
+0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05 0.05
+!
+taul_nir       !leaf transmittance nir 
+0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10 0.10
+!
+taus_vis       !stem transmittance vis 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+!
+taus_nir       !stem transmittance nir 
+0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001 0.001
+!
+xl             !leaf/stem orientation index
+0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 0.01 
+!
+vw             !btran exponent:[(h2osoi_vol-watdry)/(watopt-watdry)]**vw
+1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 
+!
+irrig          !irrigation flag for each PFT
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+!
+
+
+
+
+
+
+
